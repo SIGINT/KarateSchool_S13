@@ -1,26 +1,12 @@
 Karate67272::Application.routes.draw do
 
-
-  get "tournament/index"
-
-  get "tournament/show"
-
-  get "tournament/new"
-
-  get "tournament/edit"
-
-  get "tournament/create"
-
-  get "tournament/update"
-
-  get "tournament/destroy"
-
   # Generated routes
   resources :events
   resources :registrations
   resources :sections
   resources :students
   resources :dojos
+  resources :tournaments
   
   # Semi-static page routes
   match 'home' => 'home#index', :as => :home
