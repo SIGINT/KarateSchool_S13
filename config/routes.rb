@@ -1,5 +1,19 @@
 Karate67272::Application.routes.draw do
 
+  get "dojo/index"
+
+  get "dojo/show"
+
+  get "dojo/new"
+
+  get "dojo/edit"
+
+  get "dojo/create"
+
+  get "dojo/update"
+
+  get "dojo/destroy"
+
   get "tournament/index"
 
   get "tournament/show"
