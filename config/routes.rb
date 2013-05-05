@@ -1,20 +1,6 @@
 Karate67272::Application.routes.draw do
 
 
-  get "dojos/index"
-
-  get "dojos/show"
-
-  get "dojos/new"
-
-  get "dojos/edit"
-
-  get "dojos/create"
-
-  get "dojos/update"
-
-  get "dojos/destroy"
-
   get "tournament/index"
 
   get "tournament/show"
