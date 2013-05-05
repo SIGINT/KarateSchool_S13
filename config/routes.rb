@@ -1,18 +1,19 @@
 Karate67272::Application.routes.draw do
 
-  get "dojo/index"
 
-  get "dojo/show"
+  get "dojos/index"
 
-  get "dojo/new"
+  get "dojos/show"
 
-  get "dojo/edit"
+  get "dojos/new"
 
-  get "dojo/create"
+  get "dojos/edit"
 
-  get "dojo/update"
+  get "dojos/create"
 
-  get "dojo/destroy"
+  get "dojos/update"
+
+  get "dojos/destroy"
 
   get "tournament/index"
 
@@ -33,6 +34,7 @@ Karate67272::Application.routes.draw do
   resources :registrations
   resources :sections
   resources :students
+  resources :dojos
   
   # Semi-static page routes
   match 'home' => 'home#index', :as => :home
