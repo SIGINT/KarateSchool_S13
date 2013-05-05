@@ -7,21 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="container">
-    <!-- TITLE BAR -->
-  	<%= link_to(image_tag('amk_titlebar.png'), home_path) %>
-  	<!-- NAV BAR -->
-  	<div class="navbar">
-  	  <div class="navbar-inner">
-  	    <div class="container">
-  	      <%= render :partial => "partials/navigation" %>
-  	    </div>
-  	  </div>
-  	</div>
-  	</div>
-  	<!-- MAIN CONTENT -->
-  	<div class="container">
+  <div id="wrapper">
+	
+		<!-- TITLE BAR -->
+		<div class="masthead topbar navbar navbar-static-top" >
+			<span class="logo"><%= link_to image_tag("dojo_2.png", :size => "85x85"), home_path %></span>
+			<h1>A &amp; M Karate Tournament System</h1>
+		</div>
+		
+		<!-- MAIN CONTENT -->
+    <div class="container cont-border">
+	
+			<!-- NAV BAR -->
+			<%= render 'partials/navigation' %>
+			
   		<!-- flash messages -->
   		<% flash.each do |name, msg| %>
   			<div class="alert alert-<%= name == :notice ? "success" : "error" %>">
@@ -29,22 +28,20 @@
   				<%= msg %>
   			</div>
       <% end %>
+
   		<div class="row">
   			<!-- main content placed here -->
   			<div class="span12">
-  			  <div id="main_content">
+  	
+					<div id="main_content">
   			   <%= yield %>
   			  </div>
   			</div>
   		</div>
   	</div>
+		<!-- FOOTER -->
+		<%= render :partial => "partials/footer" %>
   </div>
 	
-	<!-- FOOTER -->
-	<footer>
-    <div class="container">
-			<%= render :partial => "partials/footer" %>
-    </div>
-  </footer>
 </body>
 </html>

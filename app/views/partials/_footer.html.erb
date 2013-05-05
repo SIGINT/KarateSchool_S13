@@ -1,3 +1,4 @@
+<!--
 <div id="footer">
 	<%= link_to 'Home', home_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
   <%= link_to 'About AMK School', about_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
@@ -8,5 +9,21 @@
 		Webmaster: <%= mail_to("profh@cmu.edu", "Klingon Code Warrior", :encode => "javascript") %> 
 		&nbsp;&nbsp;&copy 2013
 		<p class="supertiny">&nbsp;</p>
+	</div>
+</div>
+-->
+
+<div id="footer">
+	<div class="signature">
+		<p><b>Webmaster: Luke Jasko &nbsp;&nbsp;&copy 2013</b></p>
+	</div>
+	<div class="static-links">
+		<%= link_to "Home", home_path %>
+		<span class="pillars">||</span>
+		<%= link_to "About AMK School", about_path %>
+		<span class="pillars">||</span>
+		<%= link_to "Privacy", privacy_path %>
+		<span class="pillars">||</span>
+		<%= link_to "Contact", contact_path %>
 	</div>
 </div>
