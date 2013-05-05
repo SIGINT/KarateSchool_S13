@@ -5,8 +5,8 @@ class DojosController < ApplicationController
 
   def show
     @dojo = Dojo.find(params[:id])
-    # --- REVISIT: limit to active students? ---
-    @students = @dojo.students.alphabetical.paginate(:page => params[:page]).per_page(8)
+    # --- REVISIT: limit to active students? pagination not possible using current_students method ---
+    @students = @dojo.current_students
   end
 
   def new
