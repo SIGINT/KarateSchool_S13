@@ -1,2 +1,37 @@
-<h1>Dojos#index</h1>
-<p>Find me in app/views/dojos/index.html.erb</p>
+<div class="row">
+	<div class="span2"></div>
+	<div class="span8">
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th>Name</th>
+					<th>Street</th>
+					<th>City</th>
+					<th>State</th>
+					<th>Zip</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+				<% @dojos.each do |d| %>
+					<tr>
+						<td><%= link_to d.name, dojo_path(d) %></td>
+						<td><%= d.street %></td>
+						<td><%= d.city %></td>
+						<td><%= d.state %></td>
+						<td><%= d.zip %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div class="digg_pagination">
+	    <div clas="page_info">
+	      <%= page_entries_info @dojos %>
+	    </div>
+	    <%= will_paginate @dojos, :container => true, :previous_label => "Previous", :next_label => "Next", :inner_window => 2 %>
+	  </div>
+		<br>
+		<%= link_to raw("<i class='icon-plus icon-white'></i> Add a New Dojo"), new_dojo_path, :class => 'btn btn-primary', :id => 'Create Dojo' %>
+	</div>
+	<div class="span2"></div>
+</div>
+

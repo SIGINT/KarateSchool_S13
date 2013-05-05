@@ -1,6 +1,6 @@
 class DojosController < ApplicationController
   def index
-    @dojos = Dojo.active.alphabetical.paginate(:page => params[:page]).per_page(8)
+    @dojos = Dojo.active.alphabetical.paginate(:page => params[:page]).per_page(8) 
   end
 
   def show
