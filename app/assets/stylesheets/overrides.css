@@ -16,14 +16,6 @@ body {
 	margin: auto;
 }
 
-#footer div {
-    display: table;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-		padding-top: 2px;
-}
-
 span h3 {
 	font-weight: normal;
 }
@@ -36,11 +28,23 @@ span h3 {
 	padding-bottom: 8px;
 }
 
+div.navbar {
+	margin-top: -16px;
+	margin-left: -26px;
+	margin-right: -26px;
+}
+
 div.navbar-inner {
+	min-height: 36px;
 	background: url(dark_wood.png) repeat-x;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+	/*
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
+	*/
 	border: none;
 }
 
@@ -64,11 +68,13 @@ div.navbar-inner {
 	font-weight: 200;
 	color: #999;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	vertical-align: middle;
 }
 
 .navbar .navbar-inner .nav > li > a:hover {
 	color: #DFDFDF;
 	text-shadow: 0 2px 0 rgba(0,0,0,0.75);
+	vertical-align: middle;
 }
 
 .navbar .nav .divider-vertical {
@@ -80,17 +86,15 @@ div.navbar-inner {
 	text-align: center;
 }
 
-#main_content {
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
-
 .logo img, .masthead h1 {
 	display: inline;
 	font-size: 28px;
 }
 
 .masthead {
+	padding-top: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
 	height: auto;
 	color: #333;
 	text-shadow: 0px 2px 3px #e2e2e2;
@@ -125,6 +129,8 @@ div.navbar-inner {
 }
 
 .cont-border {
+	padding-right: 12px;
+	padding-left: 12px;
 	border-right: 1px solid #d5d5d5;
 	border-left: 1px solid #d5d5d5;
 	background: white;
@@ -135,10 +141,13 @@ div.navbar-inner {
 	min-height: 100%;
 	position: relative;
 	height: auto !important;
-	margin: 0 auto -40px;
+	/*margin: 0 auto -40px;*/
+	overflow-x: hidden;
 }
 
 #main_content {
+	margin-top: 60px;
+	margin-bottom: 60px;
 	padding-bottom: 60px;  /* Same height as footer */
 }
 
@@ -159,7 +168,16 @@ div.navbar-inner {
 	box-shadow:         0px 1px 6px rgba(51, 51, 51, 1);
 }
 
+#footer div {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+		padding-top: 2px;
+}
+
 .pillars {
+	color: #999;
 	font-size: 10px;
 	padding-left: 6px;
 	padding-right: 6px;

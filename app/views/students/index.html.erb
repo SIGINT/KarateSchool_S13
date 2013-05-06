@@ -1,12 +1,18 @@
 <div class="row">
-	<div class="span8">
-		<h3>Active Students</h3>
+	<div class="span6">
+		<legend>Active Students</legend>
 		<%= render :partial => "active_students" %>
 	</div>
-	<div class="span4">
-		<h3>Inactive Students</h3>
+	<div class="span6">
+		<legend>Inactive Students</legend>
 		<%= render :partial => "inactive_students" %>
 	</div>
 </div>
-
-<%= link_to raw("<i class='icon-plus icon-white'></i> Add a New Student"), new_student_path, :class => 'btn btn-primary', :id => 'Create Student' %>
+<br><br>
+<div class="row">
+	<div class="span1"></div>
+	<div class="span10">
+		<%= link_to raw("<i class='icon-plus icon-white'></i> Add a New Student"), new_student_path, :class => 'btn btn-primary', :id => 'Create Student' %>
+	</div>
+	<div class="span1"></div>
+</div>
