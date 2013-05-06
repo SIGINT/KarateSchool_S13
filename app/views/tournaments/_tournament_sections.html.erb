@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Event</th>
+			<th>Rank(s)</th>
+			<th>Age(s)</th>
+			<th>Location</th>
+			<th>Round Time</th>
+    </tr>
+  </thead>
+  <tbody>
+		<% @sections.each do |s| %>
+			<tr>
+				<td><%= s.event.name %></td>
+				<td><%= s.max_rank.nil? ? "#{rank_name(s.min_rank)} and up" : "#{rank_name(s.min_rank)} - #{rank_name(s.max_rank)}" %></td>
+				<td><%= s.max_age.nil? ? "#{s.min_age} and up" : "#{s.min_age} - #{s.max_age}" %></td>
+				<td><%= s.location %></td>
+				<td><%= s.round_time %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<div class="digg_pagination">
+  <div clas="page_info">
+    <%= page_entries_info @sections %>
+  </div>
+  <%= will_paginate @sections, :container => true, :previous_label => "Previous", :next_label => "Next", :inner_window => 2 %>
+</div>

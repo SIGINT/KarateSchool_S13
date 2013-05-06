@@ -1,0 +1,28 @@
+<div class="rounded-box">
+	<legend>Tournament Details</legend>
+	<p>
+		<h4>
+		  Name: <%= @tournament.name %>
+		</h4>
+	</p>
+
+	<p>
+	  <b>Date:</b> <%= @tournament.date.strftime("%m/%d/%y") %>
+	</p>
+
+	<p>
+	  <b>Rank(s):</b> <%= @tournament.max_rank.nil? ? "#{rank_name(@tournament.min_rank)} and up" : "#{rank_name(@tournament.min_rank)} - #{rank_name(@tournament.max_rank)}" %>
+	</p>
+	
+	<p>
+		<b># of Sections:</b> <%= @num_sections %>
+	</p>
+	
+	<p>
+		<b># of Registrants:</b> TODO
+	</p>
+
+	<p>
+	  <b>Active:</b> <%= @tournament.active ? raw("<span class='label label-success'>Yes&nbsp;&#x2713;</span>") : raw("<span class='label label-important'>No&nbsp;&#x2717;</span>") %>
+	</p>
+</div>

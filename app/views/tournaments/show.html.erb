@@ -1,2 +1,20 @@
-<h1>Tournaments#show</h1>
-<p>Find me in app/views/tournaments/show.html.erb</p>
+<div class="row">
+	<div class="span3"></div>
+	<div class="span6">
+		<%= render 'tournament_details' %>
+	</div>
+	<div class="span3"></div>
+</div>
+<br>
+<div class="row">
+	<div class="span2"></div>
+	<div class="span8">
+		<br><br>
+		<% if @sections.empty? %>
+			<em>No Current Sections</em>
+		<% else %>
+			<%= render 'tournament_sections' %>
+		<% end %>
+	</div>
+	<div class="span2"></div>
+</div>
