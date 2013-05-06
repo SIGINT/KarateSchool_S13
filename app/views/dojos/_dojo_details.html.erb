@@ -1,9 +1,4 @@
 <p>
-	<%= image_tag @dojo.create_map_link %>
-</p>
-<br>
-
-<p>
 	<h4>
 	  Name: <%= @dojo.name %>
 	</h4>
@@ -22,5 +17,9 @@
 </p>
 
 <p>
-  <b>Active:</b> <%= @dojo.active ? "Yes" : "No" %>
+	<b># of Students:</b> <%= @dojo.current_students.size %>
+</p>
+
+<p>
+  <b>Active:</b> <%= @dojo.active ? raw("<span class='label label-success'>Yes&nbsp;&#x2713;</span>") : raw("<span class='label label-important'>No&nbsp;&#x2717;</span>") %>
 </p>

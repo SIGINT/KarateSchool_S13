@@ -1,11 +1,19 @@
-<div class="row">
-	<div class="span3"></div>
-	<div class="span6">
-		<%= render 'dojo_details' %>
+<div class="row-fluid">
+	<div class="span1"></div>
+	<div class="span10">
+		<div class="row-fluid rounded-box">
+			<legend>Dojo Details</legend>
+			<div class="span5">
+				<%= render 'dojo_details' %>
+			</div>
+			<div class="span5">
+				<%= render 'dojo_map' %>
+			</div>
+		</div>
 	</div>
-	<div class="span3"></div>
+	<div class="span1"></div>
 </div>
-<br>
+<br><br>
 <div class="row">
 	<div class="span2"></div>
 	<div class="span8">
