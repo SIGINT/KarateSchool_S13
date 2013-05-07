@@ -13,10 +13,15 @@
 		<div class="masthead topbar navbar navbar-static-top" >
 			<span class="logo"><%= link_to image_tag("dojo_2.png", :size => "85x85"), home_path %></span>
 			<h1>A &amp; M Karate Tournament System</h1>
-			
-			<% unless is_login_page? %>
-				<span><%= render :partial => 'partials/login_bar' %></span>
-			<% end %>
+
+			<!-- INLINE LOGIN OR LOGOUT LINK (TOP RIGHT CORNER) -->
+			<span id="login-bar">
+				<% if logged_in? %>
+					<%= link_to "Logout", logout_path %>
+				<% elsif !is_login_page? %>
+					<%= render :partial => 'partials/login_bar' %>
+				<% end %>
+			</span>
 		</div>
 			
 		<!-- MAIN CONTENT -->
