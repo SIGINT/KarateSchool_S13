@@ -8,16 +8,17 @@
 </head>
 <body>
   <div id="wrapper">
-	
+		
 		<!-- TITLE BAR -->
 		<div class="masthead topbar navbar navbar-static-top" >
 			<span class="logo"><%= link_to image_tag("dojo_2.png", :size => "85x85"), home_path %></span>
 			<h1>A &amp; M Karate Tournament System</h1>
+			<span><%= render :partial => 'partials/login_bar' %></span>
 		</div>
-		
+			
 		<!-- MAIN CONTENT -->
     <div class="container cont-border">
-			
+
 			<!-- NAV BAR -->
 			<%= render 'partials/navigation' %>
 			

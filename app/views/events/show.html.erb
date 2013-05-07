@@ -6,7 +6,7 @@
     </p>
 
     <p>
-      <b>Active:</b> <%= @event.active ? "Yes" : "No" %>
+      <b>Active:</b> <%= @event.active ? raw("<span class='label label-success'>Yes&nbsp;&#x2713;</span>") : raw("<span class='label label-important'>No&nbsp;&#x2717;</span>") %>
     </p>
 	</div>
 </div>
