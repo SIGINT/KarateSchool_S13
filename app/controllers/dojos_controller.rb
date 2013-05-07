@@ -1,6 +1,10 @@
 class DojosController < ApplicationController
   def index
-    @dojos = Dojo.active.alphabetical.paginate(:page => params[:page]).per_page(8) 
+    @dojos = Dojo.active.alphabetical.paginate(:page => params[:page]).per_page(8)
+    
+    if @dojos.empty?
+      redirect_to home_path, notice: "There are currently no dojos in the system"
+    end
   end
 
   def show
