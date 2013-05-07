@@ -11,7 +11,7 @@
   <tbody>
 		<% @sections.each do |s| %>
 			<tr>
-				<td><%= s.event.name %></td>
+				<td><%= link_to s.event.name, section_path(s) %></td>
 				<td><%= s.max_rank.nil? ? "#{rank_name(s.min_rank)} and up" : "#{rank_name(s.min_rank)} - #{rank_name(s.max_rank)}" %></td>
 				<td><%= s.max_age.nil? ? "#{s.min_age} and up" : "#{s.min_age} - #{s.max_age}" %></td>
 				<td><%= s.location %></td>
