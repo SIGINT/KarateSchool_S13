@@ -1,3 +1,34 @@
+<%= simple_nested_form_for @student, defaults: { input_html: { class: 'input-medium' } }, :html => { :class => 'form-vertical' } do |student_form| %>
+  <div class="row-fluid">
+		<div class="span1"></div>
+		<div class="span10">
+			<div class="row-fluid rounded-box">
+				<legend><%= controller.action_name.capitalize %> Student</legend>
+				<br />
+				<fieldset>
+				<div class="span5">
+		        <%= render :partial => "student_fields", :locals => { :f => student_form } %>
+				</div>
+				<div class="span5">
+						<%= student_form.simple_fields_for :user do |user_form| %>
+		          <%= render :partial => "user_fields", :locals => { :f => user_form } %>
+		        <% end %>
+				</div>
+				</fieldset>
+				<div class="form-actions">
+			    <%= student_form.submit nil, :class => 'btn btn-primary' %>
+			    <%= link_to 'Cancel', students_path, :class => 'btn' %>
+			  </div>
+			</div>
+    </div>
+		<div class="span1"></div>
+	</div>
+<% end %>
+
+
+
+<!--
+
 <%= simple_form_for @student, :html => { :class => 'form-horizontal' } do |f| %>
   <fieldset>
     <legend><%= controller.action_name.capitalize %> Student</legend>
@@ -16,3 +47,5 @@
     </div>
   </fieldset>
 <% end %>
+
+-->
