@@ -3,7 +3,8 @@ class DojosController < ApplicationController
     @dojos = Dojo.active.alphabetical.paginate(:page => params[:page]).per_page(8)
     
     if @dojos.empty?
-      redirect_to home_path, notice: "There are currently no dojos in the system"
+      flash[:notice] = "There are currently no dojos in the system"
+      redirect_to home_path
     end
   end
 

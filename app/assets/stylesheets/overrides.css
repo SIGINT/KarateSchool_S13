@@ -129,10 +129,13 @@ div.navbar-inner {
 }
 
 .cont-border {
+	min-height: 520px;
 	padding-right: 12px;
 	padding-left: 12px;
 	border-right: 1px solid #d5d5d5;
 	border-left: 1px solid #d5d5d5;
+	border-bottom: 1px solid #d5d5d5;
+	margin-bottom: 140px;
 	background: white;
 }
 
