@@ -86,7 +86,7 @@ div.navbar-inner {
 	text-align: center;
 }
 
-.logo img, .masthead h1 {
+.logo img, .masthead h1, #login-bar form {
 	display: inline;
 	font-size: 28px;
 }
@@ -185,6 +185,12 @@ div.navbar-inner {
 
 .static-links a {
 	vertical-align: middle;
+}
+
+#login-bar {
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
 }
 
 /* END ADDITION */
