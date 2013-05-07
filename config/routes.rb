@@ -1,5 +1,11 @@
 Karate67272::Application.routes.draw do
 
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   # Generated routes
   resources :events
   resources :registrations
