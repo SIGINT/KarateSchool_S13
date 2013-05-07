@@ -192,8 +192,20 @@ div.navbar-inner {
 
 #login-bar {
 	float: right;
+	vertical-align: middle;
 	margin-top: 30px;
-	margin-right: 26px;
+	margin-right: 32px;
+}
+
+a.logout {
+	font-size: 18px;
+	color: #555;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+a.logout:hover {
+	color: #333;
 }
 
 /* END ADDITION */
@@ -275,6 +287,10 @@ td.centered {
 }
 
 .icon-user {
+	background-image: url("./img/glyphicons-halflings.png");
+}
+
+.icon-off {
 	background-image: url("./img/glyphicons-halflings.png");
 }
 

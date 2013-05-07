@@ -17,7 +17,7 @@
 			<!-- INLINE LOGIN OR LOGOUT LINK (TOP RIGHT CORNER) -->
 			<span id="login-bar">
 				<% if logged_in? %>
-					<%= link_to "Logout", logout_path %>
+					<%= link_to "Logout", logout_path, :class => 'logout' %>
 				<% elsif !is_login_page? %>
 					<%= render :partial => 'partials/login_bar' %>
 				<% end %>
