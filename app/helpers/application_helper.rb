@@ -66,4 +66,9 @@ module ApplicationHelper
     end
   end
   
+  def is_login_page?
+    return (params[:action] == "new" && params[:controller] == "sessions")
+  end
+      
+  
 end
