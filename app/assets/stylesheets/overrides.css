@@ -267,6 +267,14 @@ td.centered {
 	background-image: url("./img/glyphicons-halflings.png");
 }
 
+.icon-lock {
+	background-image: url("./img/glyphicons-halflings-white.png");
+}
+
+.icon-user {
+	background-image: url("./img/glyphicons-halflings-white.png");
+}
+
 .icon-white {
 	background-image: url("./img/glyphicons-halflings-white.png");
 }
