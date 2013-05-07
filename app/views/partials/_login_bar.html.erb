@@ -1,21 +1,7 @@
 <span id="login-bar">
-	<form class="form-inline">
-	  <input type="text" class="input-medium" placeholder="Email">
-	  <input type="password" class="input-medium" placeholder="Password">
-	  <button type="submit" class="btn btn-small">Login</button>
+	<form accept-charset="UTF-8" action="/sessions" method="post" class="form-inline">
+		<input id="email" name="email" type="text" class="input-medium" placeholder="Email">
+		<input id="password" name="password" type="password" class="input-medium" placeholder="Password">
+	  <button type="submit" class="btn btn-small">Log in</button>
 	</form>
 </span>
-
-<!--
-<%= form_tag sessions_path, :class => 'form-inline fright' do %>
-
-	<%= label_tag :email %>
-	<%= text_field_tag :email, params[:email] %>
-	
-	<%= label_tag :password %>
-	<%= password_field_tag :password %>
-	
-	<%= submit_tag "Log In" %>
-	
-<% end %>
--->
