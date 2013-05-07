@@ -4,8 +4,8 @@
 		
 		<%= f.input :name %>
 		<%= f.input :date, :as => :date, :start_year => Date.today.year, :end_year => Date.today.year + 50, :order => [:month, :day, :year], :include_blank => true %>
-		<%= f.input :min_rank %>
-		<%= f.input :max_rank %>
+		<%= f.input :min_rank, :collection => Student::RANKS %>
+		<%= f.input :max_rank, :collection => Student::RANKS %>
 		<%= f.input :active %>
 
     <div class="form-actions">
