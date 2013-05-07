@@ -26,7 +26,7 @@ class DojosController < ApplicationController
     @dojo = Dojo.new(params[:dojo])
     
     if @dojo.save
-      flash[:notice] = "Successfully created #{@dojo.name}"
+      flash[:notice] = "Successfully created #{@dojo.name} dojo"
       redirect_to @dojo
     else
       render :action => 'new'
@@ -37,7 +37,7 @@ class DojosController < ApplicationController
     @dojo = Dojo.find(params[:id])
     
     if @dojo.update_attributes(params[:dojo])
-      flash[:notice] = "Successfully updated #{@dojo.name}."
+      flash[:notice] = "Successfully updated #{@dojo.name} dojo"
       redirect_to @dojo
     else
       render :action => 'edit'
