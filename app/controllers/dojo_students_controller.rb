@@ -1,12 +1,16 @@
 class DojoStudentsController < ApplicationController
   def new
     @dojo_student = DojoStudent.new
+    @student = nil
+    @dojo = nil
     
     # If request comes from students#show page, prefetch student using params
     if params[:from] = "student"
       @student = Student.find(params[:id])
+    elsif params[:from] = "dojo"
+      @dojo = Dojo.find(params[:id])
     else
-      @student = nil
+      # Do nothing
     end
   end
   
@@ -18,7 +22,7 @@ class DojoStudentsController < ApplicationController
       flash[:notice] = "Successfully updated #{@student.proper_name}'s dojo history"
       redirect_to @student
     else
-      redirect_to home_path, notice: "Uh oh.."
+      render :action => 'new'
     end
     
   end

@@ -30,6 +30,8 @@
 			<% else %>
 				<%= render 'memberships' %>
 			<% end %>
+			<br>
+			<%= link_to(raw("<i class='icon-plus icon-white'></i> Assign Student"), new_dojo_student_path(:id => @dojo.id, :from => 'dojo'), :class => 'btn btn-primary') %>
 		<% else %>
 			<div class="alert">
 			  <button type="button" class="close" data-dismiss="alert">&times;</button>

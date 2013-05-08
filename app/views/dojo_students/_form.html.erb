@@ -11,8 +11,14 @@
 					<%= f.input :student_id, :as => :hidden, :input_html => { :value => @student.id } %>
 					<%= f.input :student_id, :disabled => true, :placeholder => @student.name %>
 				<% end %>
-		
-				<%= f.input :dojo_id, :collection => Dojo.active.alphabetical.all %>
+				
+				<% if @dojo.nil? %>
+					<%= f.input :dojo_id, :collection => Dojo.active.alphabetical.all %>
+				<% else %>
+					<%= f.input :dojo_id, :as => :hidden, :input_html => { :value => @dojo.id } %>
+					<%= f.input :dojo_id, :disabled => true, :placeholder => @dojo.name %>
+				<% end %>
+				
 				<%= f.input :start_date, :as => :hidden, :input_html => { :value => Date.today } %>
 			</fieldset>
 	

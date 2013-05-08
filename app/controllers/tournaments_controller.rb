@@ -2,6 +2,11 @@ class TournamentsController < ApplicationController
   def index
     # --- REVISIT ---
     @tournaments = Tournament.active.chronological.paginate(:page => params[:page]).per_page(8)
+    
+    if @tournaments.empty?
+      flash[:notice] = "There are currently no tournaments in the system"
+      redirect_to home_path
+    end
   end
 
   def show
