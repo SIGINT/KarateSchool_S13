@@ -69,6 +69,18 @@ module ApplicationHelper
   def is_login_page?
     return (params[:action] == "new" && params[:controller] == "sessions")
   end
+  
+  def logical_dojos(stu)
+    dojo_options = Dojo.active.alphabetical
+    current_dojo = stu.dojo_students.current.all
+    
+    if current_dojo.empty?
+      dojo_options
+    else
+      dojo_options.delete(current_dojo[0].dojo)
+    end
+    dojo_options
+  end
       
   
 end

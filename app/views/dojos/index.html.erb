@@ -6,30 +6,16 @@
 		  <thead>
 		    <tr>
 		      <th>Name</th>
-					<!--
-					<th>Street</th>
-					-->
 					<th>Location</th>
 					<th>Members</th>
-					<!--
-					<th>State</th>
-					<th>Zip</th>
-					-->
 		    </tr>
 		  </thead>
 		  <tbody>
 				<% @dojos.each do |d| %>
 					<tr>
 						<td><%= link_to d.name, dojo_path(d) %></td>
-						<!--
-						<td><%= d.street %></td>
-						-->
 						<td><%= d.city %>, <%= d.state %></td>
 						<td><%= d.current_students.size %></td>
-						<!--
-						<td><%= d.state %></td>
-						<td><%= d.zip %></td>
-						-->
 					</tr>
 				<% end %>
 			</tbody>

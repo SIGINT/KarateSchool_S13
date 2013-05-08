@@ -7,21 +7,25 @@
 	<div class="span5">
 		<div class="rounded-box">
 		<% if @registrations.empty? %>
-				<legend>No Active Registrations</legend>
-				<br><br>
+			<legend>No Active Registrations</legend>
+			<br><br>
 		<% else %>
-				<%= render :partial => "activities" %>
+			<%= render :partial => "activities" %>
 		<% end %>
 	  </div>
-	
+		<br><br>
 	  <!-- <p class="supertiny">&nbsp;</p> -->
-		<!-- <h3>Dojo History</h3> -->
-		<%# render :partial => "dojo_history" unless @dojo_history.empty? %>
-		<%# link_to(raw("<i class='icon-plus icon-white'></i> New Dojo"), new_dojo_student_path(:id => @student.id, :from => 'student'), :class => 'btn btn-primary') %>
+		<div class="rounded-box">
+			<legend>Dojo History</legend>
+			<%= render :partial => "dojo_history" unless @dojo_history.empty? %>
+			<br>
+		<%= link_to(raw("<i class='icon-plus icon-white'></i> New Dojo"), new_dojo_student_path(:id => @student.id, :from => 'student'), :class => 'btn btn-primary') %>
+		</div>
 		
 	</div>
 	<div class="span1"></div>
 </div>
+<br>
 
 <div class="row">
 	<div class="span1"></div>

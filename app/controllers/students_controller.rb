@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    # @dojo_history = @student.dojo_students.chronological.all
+    @dojo_history = @student.dojo_students.chronological.all
     @registrations = @student.registrations.by_event_name.paginate(:page => params[:page]).per_page(10)
   end
   

@@ -6,6 +6,7 @@
 		  Name: <%= @student.name %>
 		</h4>
 	</p>
+	<br>
 
 	<p>
 	  <b>Rank:</b> <%= rank_name(@student.rank) %>
@@ -26,4 +27,5 @@
 	<p>
 	  <b>Active:</b> <%= @student.active ? raw("<span class='label label-success'>Yes&nbsp;&#x2713;</span>") : raw("<span class='label label-important'>No&nbsp;&#x2717;</span>") %>
 	</p>
+	
 </div>
