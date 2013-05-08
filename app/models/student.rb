@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
   has_many :dojo_students
   has_many :dojos, :through => :dojo_students
   
-  accepts_nested_attributes_for :user
+  accepts_nested_attributes_for :user, :reject_if => lambda { |user| user[:email].blank? }
   
   # Scopes
   scope :alphabetical, order('last_name, first_name')
