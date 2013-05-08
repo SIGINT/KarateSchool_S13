@@ -4,5 +4,6 @@
 	<%= f.input :email %>
 	<%= f.input :password %>
 	<%= f.input :password_confirmation, :label => 'Confirm' %>
+	<%= f.input :role, :collection => User::ROLES %>
 
 </div>
