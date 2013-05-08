@@ -1,5 +1,7 @@
 Karate67272::Application.routes.draw do
 
+  get "dojo_students/new"
+
   get "sessions/new"
 
   get "sessions/create"
