@@ -35,7 +35,7 @@ div.navbar {
 }
 
 div.navbar-inner {
-	min-height: 40px;
+	min-height: 44px;
 	background: url(dark_wood.png) repeat-x;
 	-webkit-border-radius: 0px 0px 10px 10px;
 	-moz-border-radius: 0px 0px 10px 10px;
@@ -68,13 +68,12 @@ div.navbar-inner {
 	font-weight: 200;
 	color: #999;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-	vertical-align: middle;
+	margin-top: 4px;
 }
 
 .navbar .navbar-inner .nav > li > a:hover {
 	color: #DFDFDF;
 	text-shadow: 0 2px 0 rgba(0,0,0,0.75);
-	vertical-align: middle;
 }
 
 .navbar .nav .divider-vertical {
