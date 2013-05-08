@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
   
   def new
     @student = Student.new
+    @user = @student.build_user
   end
 
   def edit
