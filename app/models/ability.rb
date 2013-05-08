@@ -12,8 +12,10 @@ class Ability
       can :read, Tournament, :active => true
       can [:read, :update], Student do |student|
         student.id == user.student_id
+      end
       can [:read, :update], User do |user|
         user.id == current_user.id
+      end
       can :read, Section
       #can :read, :all
       
