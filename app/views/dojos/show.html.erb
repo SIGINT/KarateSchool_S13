@@ -16,17 +16,26 @@
 <br><br>
 
 <!-- LIST DOJO'S STUDENTS -->
-<% if logged_in? %>
-	<div class="row">
-		<div class="span2"></div>
-		<div class="span8">
+<div class="row">
+	<div class="span2"></div>
+	<div class="span8">
+		<legend>Current Members</legend>
+		<br><br>
+		<% if logged_in? %>
 			<% if @students.empty? %>
-				<br><br>
-				<b>No Current Students</b>
+				<div class="alert alert-info">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<strong>None at this time</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(possibly an unpopular dojo)</em>
+				</div>
 			<% else %>
 				<%= render 'memberships' %>
 			<% end %>
-		</div>
-		<div class="span2"></div>
+		<% else %>
+			<div class="alert">
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <strong>We do apologize</strong>, but only assistants to the regional manager may view this data.
+			</div>
+		<% end %>
 	</div>
-<% end %>
+	<div class="span2"></div>
+</div>

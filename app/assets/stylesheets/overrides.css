@@ -35,7 +35,7 @@ div.navbar {
 }
 
 div.navbar-inner {
-	min-height: 36px;
+	min-height: 40px;
 	background: url(dark_wood.png) repeat-x;
 	-webkit-border-radius: 0px 0px 10px 10px;
 	-moz-border-radius: 0px 0px 10px 10px;
