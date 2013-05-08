@@ -1,4 +1,6 @@
 class DojosController < ApplicationController
+  skip_before_filter :check_login, :only => [:index, :show]
+  
   def index
     @dojos = Dojo.active.alphabetical.paginate(:page => params[:page]).per_page(8)
     
